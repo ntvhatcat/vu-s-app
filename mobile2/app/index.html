@@ -1,0 +1,340 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0-beta.1/jquery.mobile-1.2.0-beta.1.min.css" />
+<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.2.0-beta.1/jquery.mobile-1.2.0-beta.1.min.js"></script>
+<script src="phonegap.js"></script>
+<script type="text/javascript" charset="UTF-8">
+var onDeviceReady = function() {
+	var result = navigator.network.connection.type;
+		alert(result);
+	
+	document.addEventListener("pause", onPause, false);	
+};
+function onPause() { 
+alert("sdfds"); 
+}
+	function onBackButton(){
+	if($("div.ui-page-active").get(0).id == 'hello1'){
+	alert("sdfsf");	
+		}	else if($("div.ui-page-active").get(0).id=='hello2'){
+			$.mobile.changePage("#page1",{transition:"sildeup"});
+			
+			}
+			else if ($("div.ui-page-active").get(0).id =='hello3'){
+				$.mobile.changePage("page1",{transition :"slideup"});								}
+}
+	function init() {
+		document.addEventListener("deviceready", onDeviceReady, true); };
+</script>
+</head>
+<body onLoad ="init()">
+<div id="hello1" data-role="content" data-palette=""> 
+  <!-- header -->
+  <div data-role="header" data-position="fixed" data-theme="b"> </div>
+  <!-- /header --> 
+  <!-- subheader --><!-- /subheader --> 
+  <!-- content -->
+  <div data-role="page"  id="hello1" >
+    <ul data-role="listview" data-filter="true" data-filter-placeholder="Search..." data-filter-theme="c" data-inset="true"  >
+      <li data-icon="arrow-r"> <a href="#tinv-league"> <img alt="promotions" src="http://thethao247.vn/2013/05/12/v-league2-13.png">
+        <h1>V-League</h1>
+        </a> </li>
+      <li data-icon="arrow-r"> <a> <img alt="food" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQXQdXqEjDIXz2QzHZEKbYKh6PMyY8x0B6OG2QProvKDkCByza7">
+        <h1>Ngoại Hạng Anh</h1>
+        </a> </li>
+      <li data-icon="arrow-r"> <a> <img alt="travel" src="http://a9.vietbao.vn/images/vi975/the-thao/75276521-LaLiga.jpg">
+        <h1>La LiGa</h1>
+        </a> </li>
+      <li data-icon="arrow-r"> <a> <img alt="discover" src="http://forzaitalianfootball.com/wp-content/uploads/2010/08/Serie-A-Logo.jpg">
+        <h1>Serie A</h1>
+        </a> </li>
+      <li data-icon="arrow-r"> <a> <img alt="tickets" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRdtdRmZ2jJ5xRCOgTvvomxZEuBr8pxMAtQKrekVa8iAQGYowBRag">
+        <h1>Bundesliga</h1>
+        </a> </li>
+      <li data-icon="arrow-r"> <a> <img alt="settings" src="http://s3.amazonaws.com/rapgenius/filepicker%2FRWqQJqIoSOG92lgFM4mA_ligue_1.jpg">
+        <h1>Ligue 1</h1>
+        </a> </li>
+    </ul>
+    <div data-role="footer" data-position="fixed"> 
+      <!-- navbar -->
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#hello1" data-icon="home">Trang Chủ</a></li>
+          <li><a href="#hello2" data-icon="bars" class="ui-btn-active" data-transition="flip">Livescore</a></li>
+          <li><a href="#hello3" data-icon="grid">BXH</a></li>
+        </ul>
+      </div>
+      <!-- /navbar --> 
+    </div>
+    <!-- /footer --> 
+  </div>
+  <!-- /content -->
+  <div data-role="page"  id="hello2" >
+    <ul data-role="listview" data-inset="true"  >
+      <li data-icon="arrow-r"> <a> <img alt="promotions" src="http://thethao247.vn/2013/05/12/v-league2-13.png">
+        <h1>V-League</h1>
+        </a> </li>
+      <li data-icon="arrow-r"> <a> <img alt="food" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQXQdXqEjDIXz2QzHZEKbYKh6PMyY8x0B6OG2QProvKDkCByza7">
+        <h1>Ngoại Hạng Anh</h1>
+        </a> </li>
+      <li data-icon="arrow-r"> <a> <img alt="travel" src="http://a9.vietbao.vn/images/vi975/the-thao/75276521-LaLiga.jpg">
+        <h1>La LiGa</h1>
+        </a> </li>
+      <li data-icon="arrow-r"> <a> <img alt="discover" src="http://forzaitalianfootball.com/wp-content/uploads/2010/08/Serie-A-Logo.jpg">
+        <h1>Serie A</h1>
+        </a> </li>
+      <li data-icon="arrow-r"> <a> <img alt="tickets" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRdtdRmZ2jJ5xRCOgTvvomxZEuBr8pxMAtQKrekVa8iAQGYowBRag">
+        <h1>Bundesliga</h1>
+        </a> </li>
+      <li data-icon="arrow-r"> <a> <img alt="settings" src="http://s3.amazonaws.com/rapgenius/filepicker%2FRWqQJqIoSOG92lgFM4mA_ligue_1.jpg">
+        <h1>Ligue 1</h1>
+        </a> </li>
+    </ul>
+    <div data-role="footer" data-position="fixed"> 
+      <!-- navbar -->
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#hello1" data-icon="home">Trang Chủ</a></li>
+          <li><a href="#hello2" data-icon="bars" class="ui-btn-active" >Livescore</a></li>
+          <li><a href="#hello3" data-icon="grid">BXH</a></li>
+        </ul>
+      </div>
+      <!-- /navbar --> 
+    </div>
+    <!-- /footer --> 
+  </div>
+  <!-- /content -->
+  
+  <div data-role="page"  id="hello3" >
+    <ul data-role="listview" data-inset="true"  >
+      <li data-icon="arrow-r"> <a href="#bxhv-league"> <img alt="promotions" src="http://thethao247.vn/2013/05/12/v-league2-13.png">
+        <h1>V-League</h1>
+        </a> </li>
+      <li data-icon="arrow-r"> <a href="#bxhnha"> <img alt="food" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQXQdXqEjDIXz2QzHZEKbYKh6PMyY8x0B6OG2QProvKDkCByza7">
+        <h1>Ngoại Hạng Anh</h1>
+        </a> </li>
+      <li data-icon="arrow-r"> <a> <img alt="travel" src="http://a9.vietbao.vn/images/vi975/the-thao/75276521-LaLiga.jpg">
+        <h1>La LiGa</h1>
+        </a> </li>
+      <li data-icon="arrow-r"> <a> <img alt="discover" src="http://forzaitalianfootball.com/wp-content/uploads/2010/08/Serie-A-Logo.jpg">
+        <h1>Serie A</h1>
+        </a> </li>
+      <li data-icon="arrow-r"> <a> <img alt="tickets" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRdtdRmZ2jJ5xRCOgTvvomxZEuBr8pxMAtQKrekVa8iAQGYowBRag">
+        <h1>Bundesliga</h1>
+        </a> </li>
+      <li data-icon="arrow-r"> <a> <img alt="settings" src="http://s3.amazonaws.com/rapgenius/filepicker%2FRWqQJqIoSOG92lgFM4mA_ligue_1.jpg">
+        <h1>Ligue 1</h1>
+        </a> </li>
+    </ul>
+    <div data-role="footer" data-position="fixed"> 
+      <!-- navbar -->
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#hello1" data-icon="home">Trang Chủ</a></li>
+          <li><a href="#hello2" data-icon="bars" class="ui-btn-active">Livescore</a></li>
+          <li><a href="#hello3" data-icon="grid">BXH</a></li>
+        </ul>
+      </div>
+      <!-- /navbar --> 
+    </div>
+    <!-- /footer --> 
+  </div>
+  <div  data-role="page" data-palette="" id="tinv-league"> 
+    <!-- header -->
+    <div data-role="header" data-position="fixed">
+      <h1>Tin tức V-League</h1>
+    </div>
+    <!-- /header --> 
+    <!-- subheader -->
+    <div class="subheader"> 
+      <!-- navbar -->
+      <div data-role="navbar" data-theme="a">
+        <ul>
+          <li><a href="#tinv-league">V-League</a></li>
+          <li><a href="#tinhang-nhat">Hạng nhất</a></li>
+          <li><a href="#">Hạng nhì</a></li>
+        </ul>
+      </div>
+      <!-- /navbar --> 
+    </div>
+    <!-- /subheader --> 
+    <!-- content -->
+    <div data-role="content">
+      <ul data-role="listview" data-divider-theme="d">
+        <li data-role="list-divider">Hôm nay</li>
+        <li> <a href=""> <img src="http://thethao.thanhnien.com.vn/Pictures20135/OSENI_9_aoxanh_HAGL_mungbanthangmotisovaoluoiDongTamLongAn_KH01.jpg"/>
+          <h2>OSENI hạnh phúc tại HAGL</h2>
+          <p>VÒNG 20 V-LEAGUE 2013 <br />
+            chưa có gì cả <br />
+            <span class="note">New Listing</span> </p>
+          </a> </li>
+        <li> <a href=""> <img src="http://thethao247.vn/2013/03/13/110811TTFabregas01.jpg"/>
+          <h2>MU theo đuổi Fabergas</h2>
+          <p>thông tin chuyển nhượng <br />
+            giá khởi điểm mà Manchester United đưa ra cho Barcelona để có được tiền vệ người Tây Ban Nha là 30 triệu bảng <br />
+            <span class="note">New Listing</span> </p>
+          </a> </li>
+        <li data-role="list-divider">September 1</li>
+        <li> <a href=""> <img src="resources/images/houses/house.jpg"/>
+          <h2>1675 Adams St</h2>
+          <p>For Sale: 0,000 <br />
+            4 bd, 3.0 ba, 2,856 sqft <br />
+            <span class="note">New Listing</span> </p>
+          </a> </li>
+        <li data-role="list-divider">August 30</li>
+        <li> <a href=""> <img src="resources/images/houses/driveway.jpg"/>
+          <h2>1774 Clinton Ave</h2>
+          <p>For Sale: 0,000 <br />
+            4 bd, 3.0 ba, 2,856 sqft <br />
+            <span class="note">New Listing</span> </p>
+          </a> </li>
+      </ul>
+    </div>
+    <!-- /content --> 
+    <!-- footer -->
+    <div data-role="footer" data-position="fixed"> 
+      <!-- navbar -->
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#hello1" data-icon="home">Trang Chủ</a></li>
+          <li><a href="#hello2" data-icon="bars" class="ui-btn-active">Livescore</a></li>
+          <li><a href="#hello3" data-icon="grid">BXH</a></li>
+        </ul>
+      </div>
+      <!-- /navbar --> 
+    </div>
+    <!-- /footer --> 
+    
+  </div>
+  <div  data-role="page" data-palette="" id="bxhnha"> 
+    <!-- header --> 
+    <img  src="http://nld.vcmedia.vn/Images/Uploaded/Share/2009/05/25/bxh.jpg"/> 
+    <!-- /content --> 
+    <!-- footer -->
+    <div data-role="footer" data-position="fixed"> 
+      <!-- navbar -->
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#hello1" data-icon="home">Trang Chủ</a></li>
+          <li><a href="#hello2" data-icon="bars" class="ui-btn-active">Livescore</a></li>
+          <li><a href="#hello3" data-icon="grid">BXH</a></li>
+        </ul>
+      </div>
+      <!-- /navbar --> 
+    </div>
+    <!-- /footer --> 
+    
+  </div>
+  <div  data-role="page" data-palette="" id="tinhang-nhat"> 
+    <!-- header -->
+    <div data-role="header" data-position="fixed">
+      <h1>Tin tức V-League</h1>
+    </div>
+    <!-- /header --> 
+    <!-- subheader -->
+    <div class="subheader"> 
+      <!-- navbar -->
+      <div data-role="navbar" data-theme="a">
+        <ul>
+          <li><a href="#tinv-league">V-League</a></li>
+          <li><a href="#tinhang-nhat">Hạng nhất</a></li>
+          <li><a href="#">Hạng nhì</a></li>
+        </ul>
+      </div>
+      <!-- /navbar --> 
+    </div>
+    <!-- /subheader --> 
+    <!-- content -->
+    <div data-role="content">
+      <ul data-role="listview" data-divider-theme="d">
+        <li data-role="list-divider">Hôm nay</li>
+        <li> <a href=""> <img src="http://thethao247.vn/2013/05/10/ket-qua-vong-8-hang-nhat-quoc-gia-2013.jpg"/>
+          <h2>tin về giải Hạnh nhất quốc gia</h2>
+          <p>VÒNG 20 V-LEAGUE 2013 <br />
+            chưa có gì cả <br />
+            <span class="note">New Listing</span> </p>
+          </a> </li>
+        <li> <a href=""> <img src="http://u.goal.com/299900/299992_heroa.jpg"/>
+          <h2>Daklak giành vé cuối cùng lên chơi giải hạng nhất</h2>
+          <p> <br />
+            Với thắng lợi 1-0 trước Nam Định, Đắk Lắk đã giành vé lên chơi ở giải Hạng Nhất QG 2014. <br />
+            <span class="note">New Listing</span> </p>
+          </a> </li>
+        <li data-role="list-divider">September 1</li>
+        <li> <a href=""> <img src="resources/images/houses/house.jpg"/>
+          <h2>1675 Adams St</h2>
+          <p>For Sale: 0,000 <br />
+            4 bd, 3.0 ba, 2,856 sqft <br />
+            <span class="note">New Listing</span> </p>
+          </a> </li>
+        <li data-role="list-divider">August 30</li>
+        <li> <a href=""> <img src="resources/images/houses/driveway.jpg"/>
+          <h2>1774 Clinton Ave</h2>
+          <p>For Sale: 0,000 <br />
+            4 bd, 3.0 ba, 2,856 sqft <br />
+            <span class="note">New Listing</span> </p>
+          </a> </li>
+      </ul>
+    </div>
+    <!-- /content --> 
+    <!-- footer -->
+    <div data-role="footer" data-position="fixed"> 
+      <!-- navbar -->
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#hello1" data-icon="home">Trang Chủ</a></li>
+          <li><a href="#hello2" data-icon="bars" class="ui-btn-active">Livescore</a></li>
+          <li><a href="#hello3" data-icon="grid">BXH</a></li>
+        </ul>
+      </div>
+      <!-- /navbar --> 
+    </div>
+    <!-- /footer --> 
+    
+  </div>
+  <div  data-role="page" data-palette="" id="bxhv-league"> 
+    <!-- header --> 
+    <img width="510px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCWJ-Vq2fFGJG9sGQR5Kdu57w16gO_izoqIi8iDdpmP3m828aadA"/> 
+    <!-- /content --> 
+    <!-- footer -->
+    <div data-role="footer" data-position="fixed"> 
+      <!-- navbar -->
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#hello1" data-icon="home">Trang Chủ</a></li>
+          <li><a href="#hello2" data-icon="bars" class="ui-btn-active">Livescore</a></li>
+          <li><a href="#hello3" data-icon="grid">BXH</a></li>
+        </ul>
+      </div>
+      <!-- /navbar --> 
+    </div>
+    <!-- /footer --> 
+    
+  </div>
+  <div  data-role="page" data-palette="" id="bxhnha"> 
+    <!-- header --> 
+    <img width="510px" src="http://nld.vcmedia.vn/Images/Uploaded/Share/2009/05/25/bxh.jpg"/> 
+    <!-- /content --> 
+    <!-- footer -->
+    <div data-role="footer" data-position="fixed"> 
+      <!-- navbar -->
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#hello1" data-icon="home">Trang Chủ</a></li>
+          <li><a href="#hello2" data-icon="bars" class="ui-btn-active">Livescore</a></li>
+          <li><a href="#hello3" data-icon="grid">BXH</a></li>
+        </ul>
+      </div>
+      <!-- /navbar --> 
+    </div>
+    <!-- /footer --> 
+    
+  </div>
+</div>
+</body>
+</html>
