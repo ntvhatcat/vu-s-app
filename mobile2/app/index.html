@@ -13,7 +13,9 @@ var onDeviceReady = function() {
 	var result = navigator.network.connection.type;
 		alert(result);
 	
-	document.addEventListener("pause", onPause, false);	
+	document.addEventListener("pause", onPause, false);
+		document.addEventListener("back button", onBackButton, false);	
+	
 };
 function onPause() { 
 alert("resume"); 
