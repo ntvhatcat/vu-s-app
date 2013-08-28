@@ -16,17 +16,17 @@ var onDeviceReady = function() {
 	document.addEventListener("pause", onPause, false);	
 };
 function onPause() { 
-alert("sdfds"); 
+alert("resume"); 
 }
 	function onBackButton(){
 	if($("div.ui-page-active").get(0).id == 'hello1'){
-	alert("sdfsf");	
+	alert("trang chu");	
 		}	else if($("div.ui-page-active").get(0).id=='hello2'){
-			$.mobile.changePage("#page1",{transition:"sildeup"});
+			$.mobile.changePage("#hello1",{transition:"sildeup"});
 			
 			}
 			else if ($("div.ui-page-active").get(0).id =='hello3'){
-				$.mobile.changePage("page1",{transition :"slideup"});								}
+				$.mobile.changePage("#hello1",{transition :"slideup"});								}
 }
 	function init() {
 		document.addEventListener("deviceready", onDeviceReady, true); };
